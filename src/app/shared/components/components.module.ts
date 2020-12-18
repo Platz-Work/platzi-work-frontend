@@ -17,4 +17,4 @@ const Components = [
   imports: [CommonModule],
   exports: [Components],
 })
-export class ComponentsModule {}
+export class ComponentsModule { }
