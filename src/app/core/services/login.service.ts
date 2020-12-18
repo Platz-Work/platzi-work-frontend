@@ -18,6 +18,6 @@ export class LoginService {
   ) {}
 
   login(user: User): Observable<any> {
-    return this.http.post(`${environment.API_URL}auth/token`, user);
+    return this.http.post(`${environment.API_URL}token/`, user);
   }
 }
