@@ -1,5 +1,17 @@
 @import '../../../../styles.scss';
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --select-border: #777;
+  --select-focus: blue;
+  --select-arrow: var(--select-border);
+}
+
 .center {
   text-align: center;
 }
@@ -8,8 +20,8 @@
   height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
-  background-color: whitesmoke;
+  //   background-color: red;
+
   .form {
     width: 100%;
     display: flex;
@@ -18,5 +30,30 @@
     background-color: withesmoke;
     border-color: grey;
     padding: 16px;
+
+    &_lbl {
+      color: $color-gray;
+      font-weight: bold;
+      padding-bottom: 8px;
+    }
+    &_inp {
+      height: 32px;
+      font-size: 16px;
+      background-color: white;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-bottom: 16px;
+      padding: 0 8px;
+      color: $color-gray;
+      &:hover {
+        border-color: $color-green;
+      }
+      option {
+        margin: 40px;
+        background:$color-green;
+        color: #fff;
+        text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+      }
+    }
   }
 }
