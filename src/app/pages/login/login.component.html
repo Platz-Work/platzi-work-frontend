@@ -7,9 +7,44 @@
         <span class="form_logo-text">Work</span>
       </div>
       <h1 class="form_title center">Ingresar</h1>
-      <input class="form_input" placeholder="Contraseña" type="text" />
-      <input class="form_input" placeholder="Correo" type="text" />
-      <button class="form_btn">Iniciar sesión</button>
+      <form (ngSubmit)="login($event)" [formGroup]="form">
+        <input
+          class="form_input"
+          formControlName="email"
+          placeholder="Correo"
+          type="text"
+        />
+        <div
+          class="form_error email-error"
+          *ngIf="emailField.errors && emailField.dirty"
+        >
+          <div *ngIf="emailField.hasError('required')">
+            El campo es requerido
+          </div>
+          <div *ngIf="emailField.hasError('email')">
+            Ingresa un correo valido
+          </div>
+          <div class="arrow-left"></div>
+        </div>
+        <input
+          class="form_input"
+          formControlName="password"
+          placeholder="Contraseña"
+          type="password"
+        />
+        <div
+          class="form_error password-error"
+          *ngIf="passwordField.errors && passwordField.dirty"
+        >
+          <div *ngIf="passwordField.hasError('required')">
+            El campo es requerido
+          </div>
+          <div class="arrow-left"></div>
+        </div>
+        <button class="form_btn" [disabled]="form.invalid">
+          Iniciar sesión
+        </button>
+      </form>
       <span class="form_label">¿Aún no tienes cuenta?</span>
       <button class="form_btn-second">Regístrate</button>
     </div>
