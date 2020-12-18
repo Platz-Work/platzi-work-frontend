@@ -9,4 +9,8 @@ export class CardComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  moreInfo(): void {
+    console.log('hola');
+  }
 }

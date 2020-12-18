@@ -1,4 +1,25 @@
 @import "./../../../styles.scss";
+/* width */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $color-blue;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $color-green;
+}
 
 .hero {
   height: 250px;
@@ -50,10 +71,12 @@
     background-color: $color-softblue;
     height: 100vh;
     &__container {
+      padding: 12px;
       width: 65vw;
       height: 90vh;
       margin: 32px auto;
       background-color: $color-white;
+      overflow: auto;
     }
   }
   .filters {

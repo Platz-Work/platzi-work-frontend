@@ -1,0 +1,94 @@
+@import "./../../../../styles.scss";
+
+/* width */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $color-blue;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $color-green;
+}
+
+.material-icons,
+p {
+  font-size: 13pt;
+}
+
+.material-icons {
+  margin-right: 4px;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  margin: 16px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.18);
+  font-family: $font;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  border-radius: 12px;
+  &__title {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+    text-align: center;
+    font-size: 14pt;
+  }
+  &__company {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+    color: $color-softgray;
+    font-size: 12pt;
+    text-align: inherit;
+    display: flex;
+    align-items: center;
+  }
+  &__location {
+    grid-row: 2 / span 1;
+    grid-column: 4 / span 1;
+    @extend .center;
+  }
+  &__salary {
+    @extend .center;
+  }
+  button {
+    grid-row: 1 / span 1;
+    grid-column: 4 / span 1;
+    width: 40%;
+    height: 50%;
+    margin: auto;
+    background-color: $color-green;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+  }
+  &__tags {
+    grid-row: 2 / span 1;
+    grid-column: 1 / span 2;
+    @extend .center;
+    justify-content: space-evenly;
+    max-width: 100%;
+    overflow: auto;
+  }
+  &__date {
+    @extend .center;
+  }
+}
