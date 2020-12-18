@@ -6,6 +6,7 @@ import {
   FormGroup,
   Validators,
 } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -20,7 +21,8 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private loginService: LoginService,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -34,6 +36,7 @@ export class LoginComponent implements OnInit {
       console.log(user);
       this.loginService.login(user).subscribe((resp) => {
         console.log(resp);
+        this.router.navigate(['/']);
       });
     }
   }
