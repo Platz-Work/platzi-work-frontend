@@ -4,7 +4,8 @@ import { CommonModule } from '@angular/common';
 import { CardComponent } from './card/card.component';
 import { ChipComponent } from './chip/chip.component';
 
-const Components = [HeaderComponent, CardComponent, ChipComponent];
+const Components = [HeaderComponent, CardComponent, ChipComponent, FiltersComponent];
+
 
 @NgModule({
   declarations: [Components],
