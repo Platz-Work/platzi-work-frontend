@@ -1,4 +1,4 @@
-@import "./../../../../styles.scss";
+@import './../../../../styles.scss';
 
 .header {
   background-color: $color-white;
@@ -7,18 +7,77 @@
   grid-template-columns: 1fr 1fr 1fr;
   border-bottom: 1px solid rgba(21, 99, 157, 0.16);
   &__logo {
+    position: relative;
+    left: 5px;
     margin: auto;
     color: $color-gray;
     grid-column: 2 / span 1;
+
     strong {
       color: $color-green;
     }
+
+    img {
+      position: absolute;
+      left: -50px;
+      top: -8px;
+      height: 45px;
+    }
+  }
+}
+
+.dropdown:hover .dropdown__content {
+  background-color: #f1f1f1;
+  display: block;
+}
+.dropdown:hover .dropdown__area {
+  background-color: $color-green;
+}
+
+.dropdown {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  color: $color-blue;
+  align-items: center;
+  margin-right: 50px;
+
+  &__icon {
+    position:relative;
+    top:5px;
+    left:-4px;
   }
   &__user {
+    color:$color-blue;
+  }
+
+  &__area {
     display: flex;
-    color: $color-blue;
-    justify-content: flex-end;
     align-items: center;
-    margin-right: 50px;
+    width: 40px;
+    height: 100%;
+    background-color: red;
+    color: white;
+    font-size: 16px;
+    border: none;
+  }
+
+  &__content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 180px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+
+    a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      &:hover {
+        background-color: #ddd;
+      }
+    }
   }
 }

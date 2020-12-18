@@ -1,4 +1,4 @@
-@import "./../../../styles.scss";
+@import './../../../styles.scss';
 /* width */
 ::-webkit-scrollbar {
   width: 4px;
@@ -23,7 +23,7 @@
 
 .hero {
   height: 250px;
-  background-image: url("https://static.platzi.com/media/blog/platzi-master-colombia-1-jpg-1e49532c-0d8d-4d9f-b3f6-5880971f4f65.jpg");
+  background-image: url('https://static.platzi.com/media/blog/platzi-master-colombia-1-jpg-1e49532c-0d8d-4d9f-b3f6-5880971f4f65.jpg');
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -34,8 +34,11 @@
       text-align: center;
       margin-bottom: 32px;
       color: $color-blue;
-      background-color: #ffffffd6;
+      background-color: #ffffff;
+      box-shadow: 0 0 10px 10px #ffffff;
+      border-radius: 10px;
       width: 300px;
+
     }
     &--bar {
       width: 500px;
@@ -45,12 +48,14 @@
       position: relative;
       input {
         width: 500px;
-        height: 30px;
+        height: 40px;
         border-radius: 50px;
-        border: none;
+        border: $color-green 2px solid;
         padding-right: 40px;
         padding-left: 16px;
         font-family: $font;
+        opacity: 0.9;
+        font-size: 18px;
         &:focus {
           outline: none;
         }
@@ -58,7 +63,8 @@
       span {
         position: absolute;
         right: 12px;
-        top: 4px;
+        font-size: 32px;
+        top: 6px;
       }
     }
   }

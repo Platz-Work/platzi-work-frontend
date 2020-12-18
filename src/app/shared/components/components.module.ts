@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CardComponent } from './card/card.component';
 import { ChipComponent } from './chip/chip.component';
-import {FiltersComponent } from './filters/filters.component';
+import { FiltersComponent } from './filters/filters.component';
 
 const Components = [HeaderComponent, CardComponent, ChipComponent, FiltersComponent];
 
@@ -13,4 +13,4 @@ const Components = [HeaderComponent, CardComponent, ChipComponent, FiltersCompon
   imports: [CommonModule],
   exports: [Components],
 })
-export class ComponentsModule {}
+export class ComponentsModule { }
