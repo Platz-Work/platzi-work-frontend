@@ -1,1 +1,20 @@
-<p>card works!</p>
+<div class="card">
+  <h3 class="card__title">Frontend Developer</h3>
+  <p class="card__company">Google</p>
+  <span class="card__location">
+    <span class="material-icons"> location_on </span>
+    <p>Colombia</p>
+  </span>
+  <span class="card__salary"
+    ><span class="material-icons"> attach_money </span>
+    <p>10,000</p></span
+  >
+  <div class="card__tags">
+    <app-chip *ngFor="let chip of [1, 1, 1, 1]"></app-chip>
+  </div>
+  <span class="card__date"
+    ><span class="material-icons"> schedule </span>
+    <p>2 days ago</p>
+  </span>
+  <button (click)="moreInfo()">Ver</button>
+</div>

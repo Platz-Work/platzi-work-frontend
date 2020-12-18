@@ -1,0 +1,85 @@
+@import "./../../../styles.scss";
+/* width */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $color-blue;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $color-green;
+}
+
+.hero {
+  height: 250px;
+  background-image: url("https://static.platzi.com/media/blog/platzi-master-colombia-1-jpg-1e49532c-0d8d-4d9f-b3f6-5880971f4f65.jpg");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  &__search {
+    h2 {
+      margin: auto;
+      text-align: center;
+      margin-bottom: 32px;
+      color: $color-blue;
+      background-color: #ffffffd6;
+      width: 300px;
+    }
+    &--bar {
+      width: 500px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      position: relative;
+      input {
+        width: 500px;
+        height: 30px;
+        border-radius: 50px;
+        border: none;
+        padding-right: 40px;
+        padding-left: 16px;
+        font-family: $font;
+        &:focus {
+          outline: none;
+        }
+      }
+      span {
+        position: absolute;
+        right: 12px;
+        top: 4px;
+      }
+    }
+  }
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 75vw 1fr;
+  .jobs {
+    background-color: $color-softblue;
+    height: 100vh;
+    &__container {
+      padding: 12px;
+      width: 65vw;
+      height: 90vh;
+      margin: 32px auto;
+      background-color: $color-white;
+      overflow: auto;
+    }
+  }
+  .filters {
+    background-color: $color-white;
+  }
+}
