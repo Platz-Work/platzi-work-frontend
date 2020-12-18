@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "platzi-work"
+    }
+  },
+  "defaultProject": "platzi-work",
+  "cli": {
+    "analytics": false
+  }
 }
