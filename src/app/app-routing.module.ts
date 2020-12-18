@@ -1,4 +1,3 @@
-import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 
@@ -35,7 +34,10 @@ const routes: Routes = [
   },
   {
     path: '**',
-    component: NotFoundComponent,
+    loadChildren: () =>
+      import('./pages/not-found/not-found.module').then(
+        (m) => m.NotFoundModule
+      ),
   },
 ];
 
