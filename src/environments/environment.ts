@@ -4,6 +4,7 @@
 
 export const environment = {
   production: false,
+  API_URL: 'https://platzi-work.herokuapp.com/api/',
 };
 
 /*
