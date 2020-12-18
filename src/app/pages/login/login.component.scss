@@ -1,4 +1,4 @@
-@import '../../../styles.scss';
+@import "../../../styles.scss";
 
 .center {
   text-align: center;
@@ -54,6 +54,7 @@
     border-radius: 8px;
     margin-bottom: 16px;
     padding: 0 8px;
+    width: 100%;
   }
 
   &_btn {
@@ -67,6 +68,8 @@
     display: inline-block;
     font-size: 16px;
     margin-bottom: 16px;
+    width: 100%;
+    cursor: pointer;
 
     &-second {
       height: 40px;
@@ -80,6 +83,11 @@
       font-size: 16px;
       margin-bottom: 16px;
     }
+
+    &[disabled] {
+      background-color: $color-softgray;
+      cursor: not-allowed;
+    }
   }
 
   &_logo {
@@ -91,14 +99,46 @@
     left: 10px;
     margin-top: 8px;
     margin-bottom: 16px;
-    
+
     &-text {
-        color: $color-green;
+      color: $color-green;
     }
     .logo {
       position: absolute;
       left: 95px;
       top: -10px;
     }
+  }
+  form {
+    position: relative;
+  }
+  &_error {
+    position: absolute;
+    background-color: $color-blue;
+    width: fit-content;
+    padding: 8px;
+    color: $color-white;
+    border-radius: 8px;
+
+    .arrow-left {
+      width: 0;
+      height: 0;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      border-right: 10px solid $color-blue;
+      position: absolute;
+      top: 7px;
+      left: -10px;
+    }
+  }
+  .email-error {
+    top: 2%;
+    right: -50%;
+    left: 107%;
+  }
+  .password-error {
+    top: 34%;
+    right: -50%;
+    left: 107%;
   }
 }
