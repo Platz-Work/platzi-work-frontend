@@ -2,4 +2,23 @@
 
 .header {
   background-color: $color-white;
+  height: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border-bottom: 1px solid rgba(21, 99, 157, 0.16);
+  &__logo {
+    margin: auto;
+    color: $color-gray;
+    grid-column: 2 / span 1;
+    strong {
+      color: $color-green;
+    }
+  }
+  &__user {
+    display: flex;
+    color: $color-blue;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 50px;
+  }
 }
