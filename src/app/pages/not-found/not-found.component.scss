@@ -1,0 +1,53 @@
+@import "./../../../styles.scss";
+
+.not-found {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 90vh;
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    margin: 0 auto;
+    position: relative;
+    font-family: $font;
+    h2 {
+      font-size: 50pt;
+      position: relative;
+      z-index: 2;
+    }
+    span {
+      font-size: 200pt;
+      font-weight: bolder;
+      color: #89c73a2e;
+      position: absolute;
+      top: 27%;
+      z-index: 1;
+    }
+    p {
+      font-size: 14pt;
+    }
+    button {
+      height: 40px;
+      background-color: $color-green;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin-bottom: 16px;
+      width: 100%;
+      cursor: pointer;
+    }
+  }
+
+  &__image {
+    display: grid;
+    place-self: center;
+  }
+}
