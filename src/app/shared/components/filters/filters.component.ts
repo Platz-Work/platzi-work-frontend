@@ -28,12 +28,10 @@ export class FiltersComponent implements OnInit {
 
     this.dataService.getCategories().subscribe((resp) => {
       this.categories=resp.results;
-      console.log(resp.results)
     });
 
     this.dataService.getCountries().subscribe((resp) => {
       this.countries=resp.results
-      console.log(resp.results);
     });
 
   }

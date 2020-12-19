@@ -17,7 +17,6 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.dataService.getJobs().subscribe((resp) => {
       this.jobs=resp.results;
-      console.log(resp.results)
     });
   }
 }

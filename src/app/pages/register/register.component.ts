@@ -40,7 +40,6 @@ export class RegisterComponent implements OnInit {
       if (userForm.password === userForm.repassword) {
         const user = { password: userForm.password, email: userForm.email, name: userForm.name };
         this.loginService.register(user).subscribe((resp) => {
-          console.log(resp);
           this.router.navigate(['/login']);
         });
       } else {

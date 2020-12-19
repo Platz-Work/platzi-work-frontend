@@ -33,9 +33,7 @@ export class LoginComponent implements OnInit {
     event.preventDefault();
     if (this.form.valid) {
       const user = this.form.value;
-      console.log(user);
       this.loginService.login(user).subscribe((resp) => {
-        console.log(resp);
         this.router.navigate(['/']);
       });
     }
