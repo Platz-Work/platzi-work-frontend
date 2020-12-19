@@ -1,30 +1,65 @@
 <div class="container">
   <div class="form">
-    <span class="form_lbl">Rango Salarial</span>
+    <span class="form_lbl">Rango Salarial (USD)</span>
+    <div class="form__box">
+      <select name="select" class="form_inp-a">
+        <option value="null" selected>Sin mínimo</option>
+        <option value="1000">$ 1,000</option>
+        <option value="1500">$ 1,500</option>
+        <option value="2000">$ 2,000</option>
+        <option value="2500">$ 2,500</option>
+        <option value="3000">$ 3,000</option>
+        <option value="3500">$ 3,500</option>
+        <option value="4000">$ 4,000</option>
+        <option value="4500">$ 4,500</option>
+        <option value="5000">$ 5,000</option>
+      </select>
+      <select name="select" class="form_inp-b">
+        <option value="1500">$ 1,500</option>
+        <option value="2000">$ 2,000</option>
+        <option value="2500">$ 2,500</option>
+        <option value="3000">$ 3,000</option>
+        <option value="3500">$ 3,500</option>
+        <option value="4000">$ 4,000</option>
+        <option value="4500">$ 4,500</option>
+        <option value="5000">$ 5,000</option>
+        <option value="5500">$ 5,500</option>
+        <option value="6000">$ 6,000</option>
+        <option value="null" selected>Sin máximo</option>
+      </select>
+    </div>
+
+    <span class="form_lbl">Categoría</span>
     <select name="select" class="form_inp">
-        <option value="value1">20,000-25,000</option>
-        <option value="value2">25,000-30,000</option>
-        <option value="value3">30,000-35,000</option>
-        <option value="value3">35,000-40,000</option>
-        <option value="value3" selected>45,000-50,000</option>
-    </select>
-    <span class="form_lbl">Categoria</span>
-    <select name="select" class="form_inp">
-        <option value="value1">Remoto</option>
-        <option value="value3">Semi-precencial</option>
-        <option value="value2">Precencial</option>
+      <option value="null">Todas</option>
+      <option value="1">Remoto</option>
+      <option value="2">Semi-precencial</option>
+      <option value="3">Precencial</option>
     </select>
     <span class="form_lbl">Nivel de ingles</span>
     <select name="select" class="form_inp">
-        <option value="value2">Bajo</option>
-        <option value="value2">Intermedio</option>
-        <option value="value2">Alto</option>
+      <option value="null">Todos</option>
+      <option value="1">Bajo</option>
+      <option value="2">Intermedio</option>
+      <option value="3">Alto</option>
     </select>
     <span class="form_lbl">Ubicación</span>
     <select name="select" class="form_inp">
-        <option value="value1">México</option>
-        <option value="value2">Colombia</option>
+      <option value="null">Todas</option>
+      <option value="1">México</option>
+      <option value="2">Colombia</option>
     </select>
-  </div>
+    <button>
+      Filtrar
+    </button>
 
+    <button>
+      <span class="material-icons">email</span>
+      &nbsp; Habilitar notificaciones *
+    </button>
+
+    <span class="small">
+      * Al habilitar las notificaciones te llegaran correos de las nuevas vacantes disponibles con los filtros previamente establecidos.
+    </span>
+  </div>
 </div>
