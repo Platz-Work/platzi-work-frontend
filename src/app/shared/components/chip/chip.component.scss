@@ -1,9 +1,10 @@
 @import "./../../../../styles.scss";
 
 .chip {
+  font-size: 12px;
   border: 1px solid;
-  width: 100px;
-  height: 30px;
+  width: 90px;
+  height: 24px;
   display: flex;
   justify-content: center;
   align-items: center;

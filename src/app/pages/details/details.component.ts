@@ -28,6 +28,7 @@ export class DetailsComponent implements OnInit {
       id = params.get('id');
       this.dataService.getJob(id).subscribe((resp) => {
         this.job=resp;
+        console.log(this.job)
       });
 
     });

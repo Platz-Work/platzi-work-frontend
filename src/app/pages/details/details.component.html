@@ -2,7 +2,7 @@
 <div class="container">
   <div class="vacancy">
     <h1 class="vacancy__title">{{ job && job.position }}</h1>
-    <h2>Empresa</h2>
+    <h2>{{job && job.company.name}}</h2>
     <button class="vacancy__btn">
       <span class="material-icons">favorite</span>
       &nbsp; APLICAR
@@ -21,7 +21,7 @@
     <br />
     <div class="vacancy__range">
       <span class="vacancy__range-color">Rango Salarial:</span>
-      $ {{ job && job.salary_start }}- ${{ job && job.salary_end }}
+      $ {{ job && job.salary_start }}- ${{ job && job.salary_end }} {{job && job.currency.code}}
     </div>
     <div class="vacancy__advice">
       Si quieres aplicar a esta vacante, manda un DM a Shaili via Slack para que

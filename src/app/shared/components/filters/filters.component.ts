@@ -8,16 +8,15 @@ import { DataService } from '../../../core/services/data.service';
   styleUrls: ['./filters.component.scss']
 })
 
-
 export class FiltersComponent implements OnInit {
 
-  min:string;
-  max:string;
+  min: string;
+  max: string;
 
-  categorySelected:string
+  categorySelected: string
 
-  countries:any;
-  categories:any;
+  countries: any;
+  categories: any;
 
 
   constructor(
@@ -25,18 +24,16 @@ export class FiltersComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-
     this.dataService.getCategories().subscribe((resp) => {
-      this.categories=resp.results;
+      this.categories = resp.results;
     });
-
     this.dataService.getCountries().subscribe((resp) => {
-      this.countries=resp.results
+      this.countries = resp.results
     });
-
   }
+
   private filterData(): void {
-    alert(this.min)
+    alert({ min:this.min,max: this.max })
   }
 
 
