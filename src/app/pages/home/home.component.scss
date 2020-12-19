@@ -75,6 +75,10 @@
   .jobs {
     background-color: $color-softblue;
     height: 100%;
+    &__search{
+      font-weight: bold;
+      color:grey;
+    }
     &__container {
       padding: 8px;
       width: 72vw;

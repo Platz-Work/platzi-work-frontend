@@ -1,6 +1,6 @@
 <div class="card">
   <h3 class="card__title">{{job.position}}</h3>
-  <p class="card__company">Google</p>
+  <p class="card__company">{{job.company.name}}</p>
   <span class="card__location">
     <span class="material-icons"> location_on </span>
     <p>{{job.cities?job.cities:'Sin definir'}}</p>
@@ -13,7 +13,7 @@
     {{job.description}}
   </div>
   <div class="card__tags">
-    <app-chip *ngFor="let chip of [1, 1, 1, 1]"></app-chip>
+    <app-chip *ngFor="let tec of job.technologies" [tec]="tec"></app-chip>
   </div>
   <span class="card__date"
     ><span class="material-icons"> schedule </span>

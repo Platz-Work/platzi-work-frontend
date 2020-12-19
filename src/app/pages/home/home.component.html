@@ -12,7 +12,7 @@
 <main class="main">
   <section class="jobs">
     <div class="jobs__container">
-      <h2>Busco: {{searchText}}</h2>
+      <div class="jobs__search" *ngIf="searchText.length>0"> Busco: "{{searchText}}" - {{jobs.length}} Coincidencias encontradas</div>
       <app-card *ngFor="let job of jobs" [job]="job"></app-card>
     </div>
   </section>

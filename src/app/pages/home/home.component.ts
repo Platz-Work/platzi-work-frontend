@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
   ) { }
 
   jobs: any;
-  searchText: any;
+  searchText: string="";
 
   ngOnInit(): void {
     this.dataService.getJobs().subscribe((resp) => {
