@@ -1,30 +1,11 @@
 <app-header></app-header>
 <div class="container">
-  <div class="chat">
-    <button (click)="back()">
-      <span class="material-icons">arrow_back</span>
-      &nbsp;Regresar
-    </button>
-    <h2>Comentarios</h2>
-    <div class="chat__comments">
-      <app-comment></app-comment>
-      <app-comment></app-comment>
-      <app-comment></app-comment>
-    </div>
-    <input
-      class="chat__input"
-      type="text"
-      placeholder="Escribir comentario..."
-    />
-    <button class="chat__btn">Publicar</button>
-  </div>
-
   <div class="vacancy">
     <h1 class="vacancy__title">Nombre de la vacante</h1>
     <h2>Empresa</h2>
     <button class="vacancy__btn">
       <span class="material-icons">favorite</span>
-      &nbsp; GUARDAR
+      &nbsp; APLICAR
     </button>
 
     <div class="vacancy__location">
@@ -44,5 +25,23 @@
       Si quieres aplicar a esta vacante, manda un DM a Shaili via Slack para que
       te haga una intro.
     </div>
+  </div>
+  <div class="chat">
+    <button (click)="back()">
+      <span class="material-icons">arrow_back</span>
+      &nbsp;Regresar
+    </button>
+    <h2>Comentarios</h2>
+    <div class="chat__comments">
+      <app-comment></app-comment>
+      <app-comment></app-comment>
+      <app-comment></app-comment>
+    </div>
+    <input
+      class="chat__input"
+      type="text"
+      placeholder="Escribir comentario..."
+    />
+    <button class="chat__btn">Publicar</button>
   </div>
 </div>

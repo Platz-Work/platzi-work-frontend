@@ -38,7 +38,6 @@
       box-shadow: 0 0 10px 10px #ffffff;
       border-radius: 10px;
       width: 300px;
-
     }
     &--bar {
       width: 500px;
@@ -75,17 +74,61 @@
   grid-template-columns: 75vw 1fr;
   .jobs {
     background-color: $color-softblue;
-    height: 100vh;
+    height: 100%;
     &__container {
-      padding: 12px;
-      width: 65vw;
+      padding: 8px;
+      width: 72vw;
       height: 90vh;
-      margin: 32px auto;
+      margin: 16px auto;
       background-color: $color-white;
       overflow: auto;
     }
   }
   .filters {
     background-color: $color-white;
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    display: flex;
+    flex-direction: column-reverse;
+    grid-template-columns: 75vw 1fr;
+    .jobs {
+      height: 100vh;
+      &__container {
+        width: 100%;
+        padding: 4px;
+        height: 100vh;
+        margin: 4px auto;
+        background-color: whitesmoke;;
+        overflow: auto;
+      }
+    }
+    .filters {
+      background-color: $color-white;
+    }
+  }
+
+  .hero {
+    height: 200px;
+    &__search {
+      h2 {
+        font-size: large;
+      }
+      &--bar {
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        position: relative;
+
+        input {
+          width: 90%;
+          height: 40px;
+          border: $color-green 3px solid;
+        }
+      }
+    }
   }
 }

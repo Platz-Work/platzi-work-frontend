@@ -1,4 +1,4 @@
-@import "./../../../../styles.scss";
+@import './../../../../styles.scss';
 
 /* width */
 ::-webkit-scrollbar {
@@ -43,7 +43,7 @@ p {
   font-family: $font;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr 80px 1fr;
   border-radius: 12px;
   &__title {
     grid-column: 1 / span 1;
@@ -60,22 +60,29 @@ p {
     display: flex;
     align-items: center;
   }
-  &__location {
+
+  &__description {
+    height: 40px;
+    grid-column: 1 / span 4;
     grid-row: 2 / span 1;
-    grid-column: 4 / span 1;
-    @extend .center;
-    .material-icons {
-      font-size: 24px;
-      color: red;
-    }
+    font-size: 12pt;
+    color: grey;
+    padding: 16px;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* number of lines to show */
+    -webkit-box-orient: vertical;
   }
+
   &__salary {
     @extend .center;
   }
   button {
     grid-row: 1 / span 1;
     grid-column: 4 / span 1;
-    width: 100px;
+    width: 120px;
     height: 40px;
     margin: auto;
     background-color: $color-green;
@@ -87,7 +94,7 @@ p {
     cursor: pointer;
   }
   &__tags {
-    grid-row: 2 / span 1;
+    grid-row: 3 / span 1;
     grid-column: 1 / span 2;
     @extend .center;
     justify-content: space-evenly;
@@ -96,5 +103,64 @@ p {
   }
   &__date {
     @extend .center;
+  }
+  &__location {
+    grid-row: 3 / span 1;
+    grid-column: 4 / span 1;
+    @extend .center;
+    .material-icons {
+      font-size: 24px;
+      color: red;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    background-color: white;
+    margin: 16px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.18);
+    font-family: $font;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 80px 1fr 1fr;
+    border-radius: 12px;
+
+    &__title {
+      grid-column: 1 / span 2;
+      grid-row: 1 / span 1;
+    }
+    &__company {
+      grid-column: 3 / span 2;
+      grid-row: 1 / span 1;
+    }
+
+    &__salary {
+      grid-column: 1 / span 2;
+      grid-row: 2 / span 1;
+    }
+    button {
+      width: 90%;
+      grid-column: 3 / span 2;
+      grid-row: 2 / span 1;
+    }
+
+    &__description {
+      grid-column: 1 / span 4;
+      grid-row: 3 / span 1;
+    }
+
+    &__tags {
+      grid-column: 1 / span 4;
+      grid-row: 5 / span 1;
+    }
+    &__date {
+      grid-row: 4 / span 1;
+      grid-column: 1 / span 2;
+    }
+    &__location {
+      grid-row: 4 / span 1;
+      grid-column: 3 / span 2;
+    }
   }
 }
