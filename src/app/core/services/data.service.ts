@@ -27,7 +27,7 @@ export class DataService {
   //   );
   // }
 
-  getCategories(): Observable<Category> {
+  getCategories(): Observable<any> {
     return this.http.get(`${this.api}categories/`).pipe(
       retry(3),
       catchError(HandleHttpResponseError),
@@ -37,7 +37,7 @@ export class DataService {
     );
   }
 
-  getCountries(): Observable<Country> {
+  getCountries(): Observable<any> {
     return this.http.get(`${this.api}countries/`).pipe(
       retry(3),
       catchError(HandleHttpResponseError),
