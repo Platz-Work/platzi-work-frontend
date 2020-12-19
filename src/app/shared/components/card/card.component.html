@@ -1,23 +1,23 @@
 <div class="card">
-  <h3 class="card__title">Frontend Developer</h3>
+  <h3 class="card__title">{{job.position}}</h3>
   <p class="card__company">Google</p>
   <span class="card__location">
     <span class="material-icons"> location_on </span>
-    <p>Colombia</p>
+    <p>{{job.cities?job.cities:'Sin definir'}}</p>
   </span>
   <span class="card__salary"
     ><span class="material-icons"> attach_money </span>
-    <p>10,000</p></span
+    <p>{{job.salary_start}}-{{job.salary_end}}</p></span
   >
   <div class="card__description">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus justo et massa ultrices pharetra. Quisque luctus condimentum imperdiet. Duis eget elementum lorem, eget condimentum mauris. Donec erat dui, scelerisque nec sapien ut, efficitur malesuada sem. Etiam sit amet sem arcu. Sed quis vestibulum dui. Etiam ultrices a enim at sollicitudin. Sed pharetra euismod nibh et fringilla. Donec ut nulla eget lorem pharetra tincidunt a ac dui. Aenean ac dolor sed purus vestibulum pretium. Mauris leo metus, malesuada eu commodo at, volutpat at nunc. Cras ornare iaculis tortor et tristique. Nullam lacinia elit et sem vehicula, et tincidunt elit interdum. Phasellus faucibus tellus tincidunt, cursus metus in, elementum purus. Proin imperdiet commodo arcu, in faucibus elit eleifend eget.
+    {{job.description}}
   </div>
   <div class="card__tags">
     <app-chip *ngFor="let chip of [1, 1, 1, 1]"></app-chip>
   </div>
   <span class="card__date"
     ><span class="material-icons"> schedule </span>
-    <p>2 days ago</p>
+    <p style="font-size: xx-small;">{{job.updated_at}}</p>
   </span>
   <button (click)="moreInfo()">Ver</button>
 </div>
