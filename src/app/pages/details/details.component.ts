@@ -26,10 +26,8 @@ export class DetailsComponent implements OnInit {
     //Subscription Method
     this.activatedRoute.paramMap.subscribe(params => {
       id = params.get('id');
-      console.log('HERE',id)
       this.dataService.getJob(id).subscribe((resp) => {
         this.job=resp;
-        console.log(resp)
       });
 
     });
