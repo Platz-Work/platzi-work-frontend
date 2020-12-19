@@ -20,6 +20,7 @@
   height: 100vh;
   display: flex;
   justify-content: center;
+  margin-top: 16px;
   //   background-color: red;
 
   .form {
@@ -31,13 +32,62 @@
     border-color: grey;
     padding: 16px;
 
+    &__box {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .form_inp {
+        &-a {
+          width: 100%;
+          border-radius: 8px 0 0 8px;
+          height: 40px;
+          font-size: 16px;
+          background-color: white;
+          border: 1px solid #ccc;
+          margin-bottom: 16px;
+          padding: 0 8px;
+          color: $color-gray;
+          &:hover {
+            border-color: $color-green;
+          }
+          option {
+            margin: 40px;
+            background: $color-green;
+            color: #fff;
+            text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+          }
+        }
+        &-b {
+          width: 100%;
+          border-radius: 0 8px 8px 0;
+          height: 40px;
+          font-size: 16px;
+          background-color: white;
+          border: 1px solid #ccc;
+          margin-bottom: 16px;
+          padding: 0 8px;
+          color: $color-gray;
+          &:hover {
+            border-color: $color-green;
+          }
+          option {
+            margin: 40px;
+            background: $color-green;
+            color: #fff;
+            text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+          }
+        }
+      }
+    }
+
     &_lbl {
       color: $color-gray;
       font-weight: bold;
       padding-bottom: 8px;
     }
     &_inp {
-      height: 32px;
+      height: 40px;
       font-size: 16px;
       background-color: white;
       border: 1px solid #ccc;
@@ -50,10 +100,31 @@
       }
       option {
         margin: 40px;
-        background:$color-green;
+        background: $color-green;
         color: #fff;
         text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
       }
     }
   }
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 40px;
+  background-color: $color-blue;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  margin-bottom: 16px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.small{
+  font-size: 13px;
+  text-align: center;
 }
