@@ -1,1 +1,48 @@
-<p>details works!</p>
+<app-header></app-header>
+<div class="container">
+  <div class="chat">
+    <button (click)="back()">
+      <span class="material-icons">arrow_back</span>
+      &nbsp;Regresar
+    </button>
+    <h2>Comentarios</h2>
+    <div class="chat__comments">
+      <app-comment></app-comment>
+      <app-comment></app-comment>
+      <app-comment></app-comment>
+    </div>
+    <input
+      class="chat__input"
+      type="text"
+      placeholder="Escribir comentario..."
+    />
+    <button class="chat__btn">Publicar</button>
+  </div>
+
+  <div class="vacancy">
+    <h1 class="vacancy__title">Nombre de la vacante</h1>
+    <h2>Empresa</h2>
+    <button class="vacancy__btn">
+      <span class="material-icons">favorite</span>
+      &nbsp; GUARDAR
+    </button>
+
+    <div class="vacancy__location">
+      <span class="material-icons">location_on</span>
+      Ubicación
+    </div>
+    <br />
+    <span class="vacancy__date">Fecha de publicación:</span>
+    <div class="vacancy__separator"></div>
+    <div class="vacancy__description">Descripcion del trabajo</div>
+    <br />
+    <div class="vacancy__range">
+      <span class="vacancy__range-color">Rango Salarial:</span>
+      $1000 - 50000
+    </div>
+    <div class="vacancy__advice">
+      Si quieres aplicar a esta vacante, manda un DM a Shaili via Slack para que
+      te haga una intro.
+    </div>
+  </div>
+</div>
