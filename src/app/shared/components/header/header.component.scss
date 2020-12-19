@@ -32,12 +32,9 @@
   display: block;
 }
 
-
-
 .dropdown {
   width: 100%;
   position: relative;
-  top:70px;
   display: flex;
   justify-content: flex-end;
   color: $color-blue;
@@ -57,7 +54,7 @@
   &__area {
     width: 30px;
     position:relative;
-    top:-70px;
+    top:4px;
     display: flex;
     align-items: center;
     width: 40px;
@@ -69,6 +66,7 @@
   &__content {
     display: none;
     position: absolute;
+    top: 50px;
     background-color: #f1f1f1;
     min-width: 180px;
     border-radius: 8px;
