@@ -3,7 +3,8 @@
   <div class="hero__search">
     <h2>Encuentra tu trabajo ideal</h2>
     <div class="hero__search--bar">
-      <input type="text" placeholder="Buscar..." />
+      <input #main type="text" placeholder="Buscar..." 
+      (keyup.enter)="search(main.value)"/>
       <span class="material-icons">search</span>
     </div>
   </div>
@@ -11,6 +12,7 @@
 <main class="main">
   <section class="jobs">
     <div class="jobs__container">
+      <h2>Busco: {{searchText}}</h2>
       <app-card *ngFor="let job of jobs" [job]="job"></app-card>
     </div>
   </section>

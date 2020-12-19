@@ -10,13 +10,23 @@ import { DataService } from './../../core/services/data.service';
 export class HomeComponent implements OnInit {
   constructor(
     private dataService: DataService,
-  ) {}
+  ) { }
 
-  jobs:any;
+  jobs: any;
+  searchText: any;
 
   ngOnInit(): void {
     this.dataService.getJobs().subscribe((resp) => {
-      this.jobs=resp.results;
+      this.jobs = resp.results;
+    });
+  }
+
+  search(value): void {
+    this.searchText = value;
+    this.dataService.getSearchJobs(value).subscribe((resp) => {
+      console.log(resp)
+
+      this.jobs = resp.results;
     });
   }
 }

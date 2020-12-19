@@ -68,4 +68,14 @@ export class DataService {
     );
   }
 
+  getSearchJobs(search): Observable<any> {
+    return this.http.get(`${this.api}jobs/?q=${search}`).pipe(
+      retry(3),
+      catchError(HandleHttpResponseError),
+      map((response: any) => {
+        return response;
+      })
+    );
+  }
+
 }
