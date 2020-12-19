@@ -24,11 +24,13 @@ const routes: Routes = [
     loadChildren: () =>
       import('./pages/landing/landing.module').then((m) => m.LandingModule),
   },
+
   {
-    path: 'details:id',
+    path: 'details/:id',
     loadChildren: () =>
-      import('./pages/landing/landing.module').then((m) => m.LandingModule),
+      import('./pages/details/details.module').then((m) => m.DetailsModule),
   },
+
   {
     path: 'admin',
     loadChildren: () =>

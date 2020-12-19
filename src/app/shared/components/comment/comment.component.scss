@@ -1,0 +1,24 @@
+@import '../../../../styles.scss';
+
+.box {
+
+  border-radius: 8px;
+  background-color: white;
+  padding: 8px;
+  margin: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.18);
+
+  &__user {
+    color: $color-green;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  &__comment {
+    color: grey;
+    margin-bottom: 4px;
+  }
+  &__date {
+    color: lightgrey;
+    text-align: right;
+  }
+}
