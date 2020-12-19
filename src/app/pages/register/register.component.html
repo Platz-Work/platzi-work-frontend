@@ -1,19 +1,86 @@
 <div class="container">
-    <div class="container_box">
-      <div class="form">
-        <div class="form_logo">
-            <img class="logo" src="assets/images/logo.PNG" alt="logo" />
-            Platzi
-            <span class="form_logo-text">Work</span>
-          </div>
-        <h1 class="form_title center">Crear cuenta</h1>
-        <input class="form_input" placeholder="Correo" type="text" />
-        <input class="form_input" placeholder="Contraseña" type="text" />
-        <input class="form_input" placeholder="Repetir contraseña" type="text" />
-        <button class="form_btn">Regístrase</button>
-        <span class="form_label">¿Ya tienes cuenta?</span>
-        <button class="form_btn-second">Iniciar sesión</button>
+  <div class="container_box">
+    <div class="form">
+      <div class="form_logo">
+        <img class="logo" src="assets/images/logo.PNG" alt="logo" />
+        Platzi
+        <span class="form_logo-text">Work</span>
       </div>
+      <h1 class="form_title center">Crear cuenta</h1>
+
+      <form (ngSubmit)="registerUser($event)" [formGroup]="form">
+        <input
+          formControlName="name"
+          class="form_input"
+          placeholder="Nombre"
+          type="text"
+        />
+
+        <div
+          class="form_error name-error"
+          *ngIf="nameField.errors && nameField.dirty"
+        >
+          <div *ngIf="nameField.hasError('required')">
+            El campo es requerido
+          </div>
+          <div class="arrow-left"></div>
+        </div>
+
+        <input
+          formControlName="email"
+          class="form_input"
+          placeholder="Correo"
+          type="text"
+        />
+        <div
+          class="form_error email-error"
+          *ngIf="emailField.errors && emailField.dirty"
+        >
+          <div *ngIf="emailField.hasError('required')">
+            El campo es requerido
+          </div>
+          <div *ngIf="emailField.hasError('email')">
+            Ingresa un correo valido
+          </div>
+          <div class="arrow-left"></div>
+        </div>
+
+        <input
+          formControlName="password"
+          class="form_input"
+          placeholder="Contraseña"
+          type="text"
+        />
+        <div
+          class="form_error password-error"
+          *ngIf="passwordField.errors && passwordField.dirty"
+        >
+          <div *ngIf="passwordField.hasError('required')">
+            El campo es requerido
+          </div>
+          <div class="arrow-left"></div>
+        </div>
+
+        <input
+          formControlName="repassword"
+          class="form_input"
+          placeholder="Repetir contraseña"
+          type="text"
+        />
+        <div
+          class="form_error password-error"
+          *ngIf="repasswordField.errors && repasswordField.dirty"
+        >
+          <div *ngIf="repasswordField.hasError('required')">
+            El campo es requerido
+          </div>
+          <div class="arrow-left"></div>
+        </div>
+
+        <button class="form_btn" [disabled]="form.invalid">Regístrase</button>
+      </form>
+      <span class="form_label">¿Ya tienes cuenta?</span>
+      <button class="form_btn-second" (click)="login()">Iniciar sesión</button>
     </div>
   </div>
-  
+</div>
