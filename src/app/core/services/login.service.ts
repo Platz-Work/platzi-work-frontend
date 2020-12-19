@@ -20,4 +20,12 @@ export class LoginService {
   login(user: User): Observable<any> {
     return this.http.post(`${environment.API_URL}token/`, user);
   }
+
+  // refreshToken(user: User): Observable<any> {
+  //   return this.http.post(`${environment.API_URL}token/refresh/`, user);
+  // }
+
+  register(user: User): Observable<any> {
+    return this.http.post(`${environment.API_URL}register/`, user);
+  }
 }

@@ -1,12 +1,12 @@
 import { LoginService } from './../../core/services/login.service';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import {
   FormBuilder,
   FormControl,
   FormGroup,
   Validators,
 } from '@angular/forms';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
     private loginService: LoginService,
     private formBuilder: FormBuilder,
     private router: Router
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.buildForm();
@@ -39,6 +39,10 @@ export class LoginComponent implements OnInit {
         this.router.navigate(['/']);
       });
     }
+  }
+
+  register(): void {
+    this.router.navigate(['/register']);
   }
 
   // build the reactive form with validators
