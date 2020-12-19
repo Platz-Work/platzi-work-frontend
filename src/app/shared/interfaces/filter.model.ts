@@ -1,7 +1,8 @@
 export interface Filter {
-  idUser: number;
-  salaryRange: string;
-  category: string;
-  englishLevel: string;
-  ubication: string;
+  salary_start:number;
+  salary_end:number;
+  english_level:number;
+  country: number;
+  category:number;
+  send_notifications: boolean;
 }

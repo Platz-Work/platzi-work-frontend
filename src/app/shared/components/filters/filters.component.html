@@ -2,7 +2,7 @@
   <div class="form">
     <span class="form_lbl">Rango Salarial (USD)</span>
     <div class="form__box">
-      <select name="select" class="form_inp-a">
+      <select [(ngModel)]="min" name="select" class="form_inp-a">
         <option value="null" selected>Sin mínimo</option>
         <option value="1000">$ 1,000</option>
         <option value="1500">$ 1,500</option>
@@ -14,7 +14,7 @@
         <option value="4500">$ 4,500</option>
         <option value="5000">$ 5,000</option>
       </select>
-      <select name="select" class="form_inp-b">
+      <select [(ngModel)]="max" name="select" class="form_inp-b">
         <option value="1500">$ 1,500</option>
         <option value="2000">$ 2,000</option>
         <option value="2500">$ 2,500</option>
@@ -30,12 +30,12 @@
     </div>
 
     <span class="form_lbl">Categoría</span>
-    <select name="select" class="form_inp">
-      <option value="null">Todas</option>
-      <option value="1">Remoto</option>
-      <option value="2">Semi-precencial</option>
-      <option value="3">Precencial</option>
+    <select [(ngModel)]="categorySelected" name="select" class="form_inp">
+      <option value="null" selected>Todas</option>
+      <option *ngFor="let category of categories" >{{category.name}}</option>
     </select>
+    <!-- {{this.categorySelected}} -->
+
     <span class="form_lbl">Nivel de ingles</span>
     <select name="select" class="form_inp">
       <option value="null">Todos</option>
@@ -43,17 +43,19 @@
       <option value="2">Intermedio</option>
       <option value="3">Alto</option>
     </select>
+
     <span class="form_lbl">Ubicación</span>
     <select name="select" class="form_inp">
       <option value="null">Todas</option>
       <option value="1">México</option>
       <option value="2">Colombia</option>
     </select>
-    <button>
+
+    <button (click)="filterData()">
       Filtrar
     </button>
 
-    <button>
+    <button >
       <span class="material-icons">email</span>
       &nbsp; Habilitar notificaciones *
     </button>
