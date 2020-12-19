@@ -1,7 +1,7 @@
 <app-header></app-header>
 <div class="container">
   <div class="vacancy">
-    <h1 class="vacancy__title">Nombre de la vacante</h1>
+    <h1 class="vacancy__title">{{job&&job.position}}</h1>
     <h2>Empresa</h2>
     <button class="vacancy__btn">
       <span class="material-icons">favorite</span>
@@ -10,16 +10,18 @@
 
     <div class="vacancy__location">
       <span class="material-icons">location_on</span>
-      Ubicación
+      {{ job ? job.cities : 'Sin definir' }}
     </div>
     <br />
-    <span class="vacancy__date">Fecha de publicación:</span>
+    <span class="vacancy__date">
+      Fecha de publicación: {{ job.created_at }}
+    </span>
     <div class="vacancy__separator"></div>
-    <div class="vacancy__description">Descripcion del trabajo</div>
+    <div class="vacancy__description">{{ job.description }}</div>
     <br />
     <div class="vacancy__range">
       <span class="vacancy__range-color">Rango Salarial:</span>
-      $1000 - 50000
+      $ {{job.salary_start}}- ${{job.salary_end}}
     </div>
     <div class="vacancy__advice">
       Si quieres aplicar a esta vacante, manda un DM a Shaili via Slack para que

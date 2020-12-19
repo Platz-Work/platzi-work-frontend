@@ -57,4 +57,15 @@ export class DataService {
       })
     );
   }
+
+  getJob(id): Observable<any> {
+    return this.http.get(`${this.api}jobs/${id}`).pipe(
+      retry(3),
+      catchError(HandleHttpResponseError),
+      map((response: any) => {
+        return response;
+      })
+    );
+  }
+
 }

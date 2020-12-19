@@ -17,7 +17,6 @@ export class CardComponent implements OnInit {
   ngOnInit(): void {}
 
   moreInfo(): void {
-    let cardId=1
-    this.router.navigate([`/details/${cardId}`]);
+    this.router.navigate([`/details/${this.job.id}`]);
   }
 }
